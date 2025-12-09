@@ -17,8 +17,8 @@ services:
     depends_on:
       - db
     ports:
-      - "10018:8069"
-      - "20018:8072" # live chat
+      - "${ODOO_PORT_OUTSIDE}:8069"
+      - "${LIVE_PORT_OUTSIDE}:8072" # live chat
     tty: true
     command: --
     environment:
