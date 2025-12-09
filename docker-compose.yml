@@ -12,8 +12,7 @@ services:
         - ./postgresql:/var/lib/postgresql/data
 
   odoo18:
-    build: .
-    # image: odoo:18
+    image: odoo:18
     user: root
     depends_on:
       - db
