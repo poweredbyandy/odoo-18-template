@@ -5,7 +5,7 @@ services:
     user: root
     environment:
       - POSTGRES_USER=odoo
-      - POSTGRES_PASSWORD=odoo18
+      - POSTGRES_PASSWORD=odoo
       - POSTGRES_DB=postgres
     restart: always             # run as a service
     volumes:
@@ -13,6 +13,7 @@ services:
 
   odoo18:
     image: odoo:18
+    container_name: {NAME}
     user: root
     depends_on:
       - db
